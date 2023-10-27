@@ -1,0 +1,417 @@
+@import "./settings/colors";
+@import "./tools/mixins";
+@import "./settings/dimensions";
+@import "./settings/fonts";
+
+body{
+  background-color: $main-light;
+  font-family: $ff-main;
+  margin: 0;
+}
+
+div{
+  &#bar-accents{
+    position: fixed;
+  }
+}
+
+div{
+  &#social-media-bar{
+    @include backgroundBar($main-dark-teal, 0.75);
+
+    #social-bar{
+      width: inherit;
+      height: (100vh * .25);
+      display: flex;
+      position: fixed;
+      flex-direction: column;
+      bottom: 0px;
+      justify-content: center;
+    }
+
+    a{
+      &.icon{
+        @include socialIcons($white)
+      }
+          
+      &.icon::after{
+        color: $white;
+      }
+
+      &.icon:hover{
+        color: $icon-hover;
+      }
+    }
+  }
+} // end of #social-media-bar
+
+div{
+  &#home-icon-bar{
+    @include backgroundBar($main-teal, 0.75);
+
+    #home-bar{
+      width: inherit;
+      height: (100vh * .1);
+      position: fixed;
+      top: 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    a{
+      &#home-icon{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+      }
+    }
+
+    #home{
+      width: 60px;
+      height: 56px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20%;
+    }
+  }
+} // end of #home-icon-bar
+
+// Keeping navigation bar fixed top right
+nav{
+  position: fixed;
+  right: 0;
+} //end of nav
+
+div{
+  &.topnav{
+    overflow: hidden;
+  }
+
+  &.topnav-right{
+    float: right;
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+
+    a{
+      color: $main-dark-teal;
+      text-decoration: none;
+      font-size: 22px;
+      padding: 15px;
+
+      &:hover{
+        text-decoration: underline;
+      }
+
+      &:active{
+        text-decoration: underline;
+      }
+
+      &#resume{
+        background-color: $teal-20opacity;
+        border-style: solid;
+        border-color: $main-teal;
+        border-radius: 10px;
+        border-width: 2px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: $ff-main;
+        font-size: 22px;
+        color: $main-dark-teal;
+        margin: 10px 10px;
+        text-decoration: none;
+      }
+
+      &#moon{
+        font-size: 24px;
+      }
+    }
+  }
+} // end of .topnav
+
+div{
+  &#introduction{
+    margin-top: (100vh * .35);
+    margin-left: (100vh * .30);
+    width:fit-content;
+    display: inline-block;
+  }
+
+  &#name-intro{
+    display: flex;
+    flex-direction: row;
+    height: (100vh * .13);
+  }
+
+  h1{
+    &#name-title{
+      font-family: $ff-title;
+      font-size: 60px;
+    }
+
+    &#name{
+      font-family: $ff-title;
+      font-size: 60px;
+      text-decoration: underline;
+      text-decoration-color: $main-dark-teal;
+    }
+  }
+
+  img{
+    &.clover-deco{
+      padding-top: 80px;
+      width: 25px;
+      height: 25px;
+    }
+  }
+} // end of #introduction
+
+div{
+  &#about-intro{
+    display:inline-block;
+    width: (100vh*.5);
+  }
+
+  p{
+    &.description{
+      display: inline;
+      font-size: 22px;
+      line-height: $lh-normal;
+      color: $main-dark-teal;
+      font-weight: $fw-medium;
+    }
+  }
+
+  span{
+    &#underline{
+      text-decoration: underline;
+    }
+  }
+} // end of #about-intro
+
+div{
+  &#right-accent{
+    float: right;
+    position: absolute;
+    bottom: 0px;
+    right:0px;
+    color: $teal-30opacity;
+    height:fit-content;
+
+    i{
+      float: right;
+      padding-right: 50px;
+      font-size: 60px;
+      line-height: $lh-extra-thin;
+      padding-bottom: 20px;
+    }
+  }
+
+  h1{
+    &#scroll-down{
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      color: $teal-30opacity;
+      letter-spacing: 0.2em;
+      font-size: 55px;
+      font-weight: $fw-regular;
+    }
+  }
+} // end of #right-accent
+
+
+section{
+  &#projects-section{
+    margin-top: (100vh * .5);
+  }
+}
+
+div{
+
+  &.section-title{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+  }
+
+  &.title-background{
+    margin-top: 62px;
+    width: 100%;
+    height: 38px;
+    position: absolute;
+    background-color: $teal-15opacity;
+  }
+
+  h1{
+    &.content-title{
+      display: inline;
+      width: fit-content;
+      margin-left: (100vh * .3);
+      font-family: $ff-title;
+      font-size: 60px;
+      line-height: $lh-extra-thin;
+    }
+  }
+} // end of .section-title
+
+div{
+  &#projects{
+    margin-top: (100vh * .05);
+    margin-left: (100vh * .3);
+    margin-right: (100vh * .1);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 35px;
+    row-gap: 30px; 
+  }
+
+  &.project-square{
+    background-color: $teal-15opacity;
+    padding: 5%;
+    min-height: 200px;
+    position: relative;
+
+    &:hover{
+      .stack-info{
+        opacity: 1;
+      }
+    }
+  }
+
+  h2{
+    &.project-name{
+      margin-top: 0px;
+      text-decoration: underline;
+    }
+  }
+
+  a{
+    &.project-links{
+      float: right;
+      text-decoration: none;
+      color: $black;
+      padding-right: 10px;
+
+      &:hover{
+        color: $main-teal;
+      }
+  
+      &::after{
+        color: $main-teal;
+      }
+    }
+  }
+
+  p{
+    &.project-description{
+      padding-bottom: 20%;
+    }
+  }
+
+  &.stack-info{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    background-color: $teal-20opacity;
+    transition: .5s ease;
+    opacity: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    width: 100%;
+    height: 20%;
+    vertical-align: middle;
+  }
+} //end of #projects
+
+
+section{
+  &#contact-section{
+    margin-top: (100vh * .15);
+  }
+}
+
+div{
+  &#contact-description{
+    margin-top: (100vw * .02);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: (100vh *.2);
+    text-align: center;
+  }
+
+  &#contact-links{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a{
+    &.icon{
+      @include socialIcons($black)
+    }
+        
+    &.icon::after{
+      color: $black;
+    }
+
+    &.icon:hover{
+      color: $main-teal;
+    }
+  }
+} // end of contact-description
+
+div{
+  &#footer{
+    width: 100%;
+    background-color: $teal-20opacity;
+    bottom: 0;
+    text-align: center;
+  }
+
+  p{
+    &#footer-description{
+      margin-bottom: 0;
+      padding: 15px;
+    } 
+  }
+
+  a{
+    &.footer-link{
+      color: $black;
+      text-decoration: none;
+
+      &:hover{
+        color: $main-teal;
+      }
+  
+      &::after{
+        color: $main-teal;
+      }
+    }
+  }
+}
+
+//Scroll Bar
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $main-dark-teal; 
+  border-radius: 10px;
+}

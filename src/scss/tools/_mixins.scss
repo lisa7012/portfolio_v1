@@ -1,0 +1,25 @@
+//MIXIN POUR AJOUTER LA TYPOGRAPHIE
+@mixin font($family, $size: "inherit", $color: #000, $line-height: 1.2) {
+  font-family: $family;
+  font-size: $size;
+  color: $color;
+  line-height: $line-height;
+}
+
+@mixin backgroundBar($color, $opacity) {
+  width: 100px;
+  height: 100vh;
+  float: left;
+  background-color: rgba($color, $opacity);
+  border-color: $color;
+  border-width: 3px;
+  border-style: solid;
+}
+
+@mixin socialIcons($color) {
+  height: (100%/3);
+  width: 100%;
+  font-size: 44px;
+  text-align: center;
+  color: $color;
+}

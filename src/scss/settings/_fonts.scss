@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+// Project Font
+
+/// Font size
+$fz-normal: rem(20);
+
+/// Titles size
+$fz-h1: rem(100);
+$fz-h2: rem(40);
+$fz-h3: rem(25);
+
+$fz-h1-mobile: rem(35);
+$fz-h2-mobile: rem(30);
+$fz-h3-mobile: rem(20);
+
+/// Line height
+$lh-extra-thin: 1;
+$lh-thin: 1.2;
+$lh-normal: 1.5;
+$lh-medium: 1.8;
+$lh-large: 2;
+$lh-extra-large: 2.4;
+
+
+/// Font family
+$ff-title: 'Roboto', sans-serif;
+$ff-main: 'M PLUS Rounded 1c', sans-serif;
+
+/// Fonts weight
+$fw-thin: 100;
+$fw-extra-light: 200;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+$fw-black: 900;
+
+
+
